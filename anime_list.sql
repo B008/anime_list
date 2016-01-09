@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 2016 年 1 朁E09 日 09:23
+-- Generation Time: 2016 年 1 朁E09 日 09:39
 -- サーバのバージョン： 5.6.21
 -- PHP Version: 5.6.3
 
@@ -37,6 +37,19 @@ CREATE TABLE IF NOT EXISTS `animes_list` (
   `genre2` varchar(250) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+-- --------------------------------------------------------
+
+--
+-- テーブルの構造 `genres`
+--
+
+CREATE TABLE IF NOT EXISTS `genres` (
+`id` int(11) NOT NULL,
+  `created` datetime NOT NULL,
+  `modified` datetime NOT NULL,
+  `genre_name` varchar(64) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 --
 -- Indexes for dumped tables
 --
@@ -48,6 +61,12 @@ ALTER TABLE `animes_list`
  ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `genres`
+--
+ALTER TABLE `genres`
+ ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -55,6 +74,11 @@ ALTER TABLE `animes_list`
 -- AUTO_INCREMENT for table `animes_list`
 --
 ALTER TABLE `animes_list`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `genres`
+--
+ALTER TABLE `genres`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

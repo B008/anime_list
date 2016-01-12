@@ -1,0 +1,56 @@
+<div class="animesLists view">
+<h2><?php echo __('Animes List'); ?></h2>
+	<dl>
+		<dt><?php echo __('Id'); ?></dt>
+		<dd>
+			<?php echo h($animesList['AnimesList']['id']); ?>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('Created'); ?></dt>
+		<dd>
+			<?php echo h($animesList['AnimesList']['created']); ?>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('Modified'); ?></dt>
+		<dd>
+			<?php echo h($animesList['AnimesList']['modified']); ?>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('Program Name'); ?></dt>
+		<dd>
+			<?php echo h($animesList['AnimesList']['program_name']); ?>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('Company'); ?></dt>
+		<dd>
+			<?php echo h($animesList['AnimesList']['company']); ?>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('Voice Actor'); ?></dt>
+		<dd>
+			<?php echo h($animesList['AnimesList']['voice_actor']); ?>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('Genre'); ?></dt>
+		<dd>
+			<?php echo $this->Html->link($animesList['Genre']['genre_name'], array('controller' => 'genres', 'action' => 'view', $animesList['Genre']['id'])); ?>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('Genre2'); ?></dt>
+		<dd>
+			<?php echo h($animesList['AnimesList']['genre2']); ?>
+			&nbsp;
+		</dd>
+	</dl>
+</div>
+<div class="actions">
+	<h3><?php echo __('Actions'); ?></h3>
+	<ul>
+		<li><?php echo $this->Html->link(__('Edit Animes List'), array('action' => 'edit', $animesList['AnimesList']['id'])); ?> </li>
+		<li><?php echo $this->Form->postLink(__('Delete Animes List'), array('action' => 'delete', $animesList['AnimesList']['id']), array(), __('Are you sure you want to delete # %s?', $animesList['AnimesList']['id'])); ?> </li>
+		<li><?php echo $this->Html->link(__('List Animes Lists'), array('action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Animes List'), array('action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Genres'), array('controller' => 'genres', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Genre'), array('controller' => 'genres', 'action' => 'add')); ?> </li>
+	</ul>
+</div>

@@ -9,6 +9,8 @@
 		echo $this->Form->input('voice_actor');
 		echo $this->Form->input('genre_id');
 		echo $this->Form->input('genre2');
+		echo $this->Form->input('Televising Year');
+		echo $this->Form->input('Picture Url');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>

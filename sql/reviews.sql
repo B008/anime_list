@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 2016 年 1 朁E09 日 10:53
+-- Generation Time: 2016 年 1 朁E12 日 09:42
 -- サーバのバージョン： 5.6.21
 -- PHP Version: 5.6.3
 
@@ -31,7 +31,8 @@ CREATE TABLE IF NOT EXISTS `reviews` (
   `created` datetime NOT NULL,
   `modified` datetime NOT NULL,
   `animes_lists_id` int(11) NOT NULL,
-  `reviews` varchar(2000) NOT NULL,
+  `review_rank` int(11) NOT NULL,
+  `reviews` varchar(2000) DEFAULT NULL,
   `users_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 

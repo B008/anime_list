@@ -31,11 +31,6 @@
 			<?php echo h($animesList['AnimesList']['voice_actor']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Voice Actor2'); ?></dt>
-		<dd>
-			<?php echo h($animesList['AnimesList']['voice_actor2']); ?>
-			&nbsp;
-		</dd>
 		<dt><?php echo __('Genre'); ?></dt>
 		<dd>
 			<?php echo $this->Html->link($animesList['Genre']['genre_name'], array('controller' => 'genres', 'action' => 'view', $animesList['Genre']['id'])); ?>
@@ -43,15 +38,9 @@
 		</dd>
 		<dt><?php echo __('Genre2'); ?></dt>
 		<dd>
-			<?php echo h($animesList['AnimesList']['genre2']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Televising Year'); ?></dt>
-		<dd>
 			<?php echo h($animesList['AnimesList']['televising_year']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Picture Url'); ?></dt>
 		<dd>
 			<?php echo h($animesList['AnimesList']['picture_url']); ?>
 			&nbsp;

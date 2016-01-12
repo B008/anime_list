@@ -3,8 +3,8 @@ App::uses('AppModel', 'Model');
 /**
  * Review Model
  *
- * @property AnimesLists $AnimesLists
- * @property Users $Users
+ * @property AnimesList $AnimesList
+ * @property User $User
  */
 class Review extends AppModel {
 
@@ -13,7 +13,7 @@ class Review extends AppModel {
  *
  * @var string
  */
-	public $displayField = 'reviews';
+	public $displayField = 'review_rank';
 
 /**
  * Validation rules
@@ -21,7 +21,7 @@ class Review extends AppModel {
  * @var array
  */
 	public $validate = array(
-		'animes_lists_id' => array(
+		'animes_list_id' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
@@ -31,7 +31,25 @@ class Review extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'users_id' => array(
+		'review_rank' => array(
+			'numeric' => array(
+				'rule' => array('numeric'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+			'range' => array(
+				'rule' => array('range',0,6),
+				'message' => '1`5‚Ì”ÍˆÍ‚Å“ü—Í‚µ‚Ä‚­‚¾‚³‚¢',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
+		'user_id' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
@@ -51,16 +69,16 @@ class Review extends AppModel {
  * @var array
  */
 	public $belongsTo = array(
-		'AnimesLists' => array(
-			'className' => 'AnimesLists',
-			'foreignKey' => 'animes_lists_id',
+		'AnimesList' => array(
+			'className' => 'AnimesList',
+			'foreignKey' => 'animes_list_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
 		),
-		'Users' => array(
-			'className' => 'Users',
-			'foreignKey' => 'users_id',
+		'User' => array(
+			'className' => 'User',
+			'foreignKey' => 'user_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''

@@ -20,9 +20,25 @@ class User extends AppModel {
  */
 	public $validate = array(
 		'user_name' => array(
-			'notEmpty' => array(
-				'rule' => array('notEmpty'),
-				//'message' => 'Your custom message here',
+			'isUnique' => array(
+				'rule' => array('isUnique'),
+				'message' => 'Šù‚ÉŽg‚í‚ê‚Ä‚¢‚é–¼‘O‚Å‚·',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+			'alphaNumeric' => array(
+				'rule' => array('alphaNumeric'),
+				'message' => '–¼‘O‚Í”¼Šp‰p”‚Å“ü—Í‚µ‚Ä‚­‚¾‚³‚¢',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+			'between' => array(
+				'rule' => array('between',2,8),
+				'message' => '–¼‘O‚Í2`8•¶ŽšˆÈ“à‚É‚µ‚Ä‚­‚¾‚³‚¢',
 				//'allowEmpty' => false,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule
@@ -30,17 +46,17 @@ class User extends AppModel {
 			),
 		),
 		'password' => array(
-			'numeric' => array(
-				'rule' => array('numeric'),
-				//'message' => 'Your custom message here',
+			'alphaNumeric' => array(
+				'rule' => array('alphaNumeric'),
+				'message' => 'password‚Í”¼Šp‰p”‚Å“ü—Í‚µ‚Ä‚­‚¾‚³‚¢',
 				//'allowEmpty' => false,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
-			'notEmpty' => array(
-				'rule' => array('notEmpty'),
-				//'message' => 'Your custom message here',
+			'between' => array(
+				'rule' => array('between', 6,24),
+				'message' => 'ƒpƒXƒ[ƒh‚Í8`32•¶ŽšˆÈ“à‚É‚µ‚Ä‚­‚¾‚³‚¢',
 				//'allowEmpty' => false,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule

@@ -29,6 +29,14 @@ class AnimesList extends AppModel {
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
+			'isUnique' => array(
+				'rule' => array('isUnique'),
+				'message' => 'Šù‚É“o˜^‚³‚ê‚Ä‚éƒ^ƒCƒgƒ‹‚Å‚·',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
 		),
 		'genre_id' => array(
 			'numeric' => array(

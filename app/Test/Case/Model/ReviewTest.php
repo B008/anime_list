@@ -14,8 +14,9 @@ class ReviewTest extends CakeTestCase {
  */
 	public $fixtures = array(
 		'app.review',
-		'app.animes_lists',
-		'app.users'
+		'app.animes_list',
+		'app.genre',
+		'app.user'
 	);
 
 /**

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 2016 年 1 朁E12 日 09:43
+-- Generation Time: 2016 年 1 朁E12 日 10:24
 -- サーバのバージョン： 5.6.21
 -- PHP Version: 5.6.3
 
@@ -36,15 +36,16 @@ CREATE TABLE IF NOT EXISTS `animes_lists` (
   `voice_actor2` varchar(250) DEFAULT NULL,
   `genre_id` int(11) NOT NULL,
   `genre2` varchar(250) DEFAULT NULL,
-  `televising_year` int(4) DEFAULT NULL
+  `televising_year` int(4) DEFAULT NULL,
+  `picture_url` varchar(1000) DEFAULT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
 -- テーブルのデータのダンプ `animes_lists`
 --
 
-INSERT INTO `animes_lists` (`id`, `created`, `modified`, `program_name`, `company`, `voice_actor`, `voice_actor2`, `genre_id`, `genre2`, `televising_year`) VALUES
-(1, '2016-01-09 11:45:19', '2016-01-09 11:45:19', '化物語', 'シャフト', '神谷浩史', NULL, 5, '学園もの', 0);
+INSERT INTO `animes_lists` (`id`, `created`, `modified`, `program_name`, `company`, `voice_actor`, `voice_actor2`, `genre_id`, `genre2`, `televising_year`, `picture_url`) VALUES
+(1, '2016-01-09 11:45:19', '2016-01-09 11:45:19', '化物語', 'シャフト', '神谷浩史', NULL, 5, '学園もの', 0, NULL);
 
 --
 -- Indexes for dumped tables

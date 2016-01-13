@@ -16,9 +16,9 @@
 			<?php echo h($review['Review']['modified']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Animes Lists'); ?></dt>
+		<dt><?php echo __('Animes List'); ?></dt>
 		<dd>
-			<?php echo $this->Html->link($review['AnimesLists']['id'], array('controller' => 'animes_lists', 'action' => 'view', $review['AnimesLists']['id'])); ?>
+			<?php echo $this->Html->link($review['AnimesList']['program_name'], array('controller' => 'animes_lists', 'action' => 'view', $review['AnimesList']['id'])); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Review Rank'); ?></dt>
@@ -26,14 +26,14 @@
 			<?php echo h($review['Review']['review_rank']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Reviews'); ?></dt>
+		<dt><?php echo __('Review'); ?></dt>
 		<dd>
-			<?php echo h($review['Review']['reviews']); ?>
+			<?php echo h($review['Review']['review']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Users'); ?></dt>
+		<dt><?php echo __('User'); ?></dt>
 		<dd>
-			<?php echo $this->Html->link($review['Users']['id'], array('controller' => 'users', 'action' => 'view', $review['Users']['id'])); ?>
+			<?php echo $this->Html->link($review['User']['user_name'], array('controller' => 'users', 'action' => 'view', $review['User']['id'])); ?>
 			&nbsp;
 		</dd>
 	</dl>
@@ -46,8 +46,8 @@
 		<li><?php echo $this->Html->link(__('List Reviews'), array('action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Review'), array('action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Animes Lists'), array('controller' => 'animes_lists', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Animes Lists'), array('controller' => 'animes_lists', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Animes List'), array('controller' => 'animes_lists', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Users'), array('controller' => 'users', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Users'), array('controller' => 'users', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('New User'), array('controller' => 'users', 'action' => 'add')); ?> </li>
 	</ul>
 </div>

@@ -13,7 +13,7 @@ class Review extends AppModel {
  *
  * @var string
  */
-	public $displayField = 'reviews';
+	public $displayField = 'review_rank';
 
 /**
  * Validation rules
@@ -24,6 +24,24 @@ class Review extends AppModel {
 		'animes_lists_id' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
+		'review_rank' => array(
+			'numeric' => array(
+				'rule' => array('numeric'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+			'between' => array(
+				'rule' => array('between'),
 				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,

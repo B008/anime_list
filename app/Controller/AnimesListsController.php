@@ -5,6 +5,7 @@ App::uses('AppController', 'Controller');
  *
  * @property AnimesList $AnimesList
  * @property PaginatorComponent $Paginator
+ * @property SessionComponent $Session
  */
 class AnimesListsController extends AppController {
 
@@ -13,7 +14,7 @@ class AnimesListsController extends AppController {
  *
  * @var array
  */
-	public $components = array('Paginator');
+	public $components = array('Paginator', 'Session');
 
 /**
  * index method

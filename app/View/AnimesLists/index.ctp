@@ -9,6 +9,7 @@
 			<th><?php echo $this->Paginator->sort('program_name'); ?></th>
 			<th><?php echo $this->Paginator->sort('company'); ?></th>
 			<th><?php echo $this->Paginator->sort('voice_actor'); ?></th>
+			<th><?php echo $this->Paginator->sort('voice_actor2'); ?></th>
 			<th><?php echo $this->Paginator->sort('genre_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('genre2'); ?></th>
 			<th><?php echo $this->Paginator->sort('televising_year'); ?></th>
@@ -25,6 +26,7 @@
 		<td><?php echo h($animesList['AnimesList']['program_name']); ?>&nbsp;</td>
 		<td><?php echo h($animesList['AnimesList']['company']); ?>&nbsp;</td>
 		<td><?php echo h($animesList['AnimesList']['voice_actor']); ?>&nbsp;</td>
+		<td><?php echo h($animesList['AnimesList']['voice_actor2']); ?>&nbsp;</td>
 		<td>
 			<?php echo $this->Html->link($animesList['Genre']['genre_name'], array('controller' => 'genres', 'action' => 'view', $animesList['Genre']['id'])); ?>
 		</td>

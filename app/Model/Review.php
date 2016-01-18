@@ -41,7 +41,11 @@ class Review extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 			'range' => array(
+<<<<<<< HEAD
 				'rule' => array('range',0,101),
+=======
+				'rule' => array('range',0,6),
+>>>>>>> 2b1f2126d17358f6a47cbcd6c5c2c3a5b3be6ea2
 				'message' => '1`5‚Ì”ÍˆÍ‚Å“ü—Í‚µ‚Ä‚­‚¾‚³‚¢',
 				//'allowEmpty' => false,
 				//'required' => false,

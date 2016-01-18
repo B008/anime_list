@@ -23,7 +23,8 @@
 
 /** General Style Info **/
 body {
-	background: #003d4c;
+	text-align: center;
+	background: #ffffff;
 	color: #fff;
 	font-family:'lucida grande',verdana,helvetica,arial,sans-serif;
 	font-size:90%;
@@ -52,7 +53,7 @@ h1 {
 }
 h2 {
 	background:#fff;
-	color: #e32;
+	color: #5a8cbf;
 	font-family:'Gill Sans','lucida grande', helvetica, arial, sans-serif;
 	font-size: 190%;
 }
@@ -98,7 +99,8 @@ p {
 	text-decoration: underline;
 }
 #content{
-	background: #fff;
+	background: #e3f0fb;
+
 	clear: both;
 	color: #333;
 	padding: 10px 20px 40px 20px;
@@ -119,10 +121,11 @@ p {
 div.form,
 div.index,
 div.view {
-	float:right;
-	width:76%;
-	border-left:1px solid #666;
-	padding:10px 2%;
+
+	width:75%;
+	/*border-left:1px solid #666;*/
+	margin: 0 auto;
+
 }
 div.actions {
 	float:left;
@@ -137,14 +140,14 @@ div.actions h3 {
 
 /** Tables **/
 table {
-	border-right:0;
+	border:2px solid #555;
 	clear: both;
 	color: #333;
 	margin-bottom: 10px;
 	width: 100%;
 }
 th {
-	border:0;
+	border:5px solid #555;
 	border-bottom:2px solid #555;
 	text-align: left;
 	padding:4px;
@@ -161,6 +164,7 @@ th a.desc:after {
 	content: ' ⇡';
 }
 table tr td {
+	border:2px solid #555;
 	padding: 6px;
 	text-align: left;
 	vertical-align: top;

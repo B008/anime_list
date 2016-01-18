@@ -1,4 +1,5 @@
 <div class="animesLists index">
+	
 	<h2>今日の日付は
 		<?php echo date('Y年m月d日'); ?>
 		です。</h2>

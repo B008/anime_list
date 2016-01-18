@@ -1,5 +1,9 @@
 <div class="animesLists index">
-	
+	<div id="nav">
+		<ul>
+			<li><a href="">JavaDrive</a></li>
+		</ul>
+	</div>
 	<h2>今日の日付は
 		<?php echo date('Y年m月d日'); ?>
 		です。</h2>
@@ -10,8 +14,8 @@
 間違っている箇所があれば『お問い合わせフォーム』から知らせて頂けるとありがたいです。
 	'); ?></p>
 
-	<p><?php echo __('※基本的に再放送は掲載していません。'); ?></p>
 
+	<p><?php echo __('※基本的に再放送は掲載していません。'); ?></p>
 	<p><?php echo __('⇒ 今までの作品リストへ'); ?></p>
 	<table cellpadding="0" cellspacing="0">
 	<thead>
@@ -37,8 +41,7 @@
 		</td>
 		<td><?php echo h($animesList['AnimesList']['genre2']); ?>&nbsp;</td>
 		<td><?php echo h($animesList['AnimesList']['televising_year']); ?>&nbsp;</td>
-		<td><?php echo h($animesList['AnimesList']['picture_url']); ?>&nbsp;</td>
-
+		<td id="pic" align="center"><?php echo  $this->Html->image( h($animesList['AnimesList']['picture_url'])); ?>&nbsp;</td>
 
 
 	</tr>

@@ -1,5 +1,6 @@
 <?php
 App::uses('AppController', 'Controller');
+
 /**
  * AnimesLists Controller
  *
@@ -7,8 +8,9 @@ App::uses('AppController', 'Controller');
  * @property PaginatorComponent $Paginator
  * @property SessionComponent $Session
  */
-class AnimesListsController extends AppController {
 
+class AnimesListsController extends AppController {
+	public $helpers = array('Form', 'Html',);
 /**
  * Components
  *

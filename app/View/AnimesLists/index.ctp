@@ -1,7 +1,7 @@
 <div class="animesLists index">
 	<div id="nav">
 		<ul>
-			<li><a href="">JavaDrive</a></li>
+			<li><a href="">秘密の部屋</a></li>
 		</ul>
 	</div>
 	<h2>今日の日付は
@@ -20,19 +20,21 @@
 	<table cellpadding="0" cellspacing="0">
 	<thead>
 	<tr>
-			<th><?php echo $this->Paginator->sort('program_name'); ?></th>
-			<th><?php echo $this->Paginator->sort('company'); ?></th>
-			<th><?php echo $this->Paginator->sort('voice_actor'); ?></th>
-			<th><?php echo $this->Paginator->sort('genre_id'); ?></th>
-			<th><?php echo $this->Paginator->sort('genre2'); ?></th>
-			<th><?php echo $this->Paginator->sort('televising_year'); ?></th>
-			<th><?php echo $this->Paginator->sort('picture_url'); ?></th>
+			<th><?php echo $this->Paginator->sort('サムネ'); ?></th>
+			<th><?php echo $this->Paginator->sort('タイトル'); ?></th>
+			<th><?php echo $this->Paginator->sort('制作会社'); ?></th>
+			<th><?php echo $this->Paginator->sort('声優'); ?></th>
+			<th><?php echo $this->Paginator->sort('ジャンル'); ?></th>
+			<th><?php echo $this->Paginator->sort('サブジャンル'); ?></th>
+			<th><?php echo $this->Paginator->sort('放映日'); ?></th>
+
 
 	</tr>
 	</thead>
 	<tbody>
 	<?php foreach ($animesLists as $animesList): ?>
 	<tr>
+		<td id="pic" align="center"><?php echo  $this->Html->image( h($animesList['AnimesList']['picture_url'])); ?>&nbsp;</td>
 		<td><?php echo h($animesList['AnimesList']['program_name']); ?>&nbsp;</td>
 		<td><?php echo h($animesList['AnimesList']['company']); ?>&nbsp;</td>
 		<td><?php echo h($animesList['AnimesList']['voice_actor']); ?>&nbsp;</td>
@@ -41,7 +43,7 @@
 		</td>
 		<td><?php echo h($animesList['AnimesList']['genre2']); ?>&nbsp;</td>
 		<td><?php echo h($animesList['AnimesList']['televising_year']); ?>&nbsp;</td>
-		<td id="pic" align="center"><?php echo  $this->Html->image( h($animesList['AnimesList']['picture_url'])); ?>&nbsp;</td>
+
 
 
 	</tr>

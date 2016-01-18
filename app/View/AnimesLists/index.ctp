@@ -19,16 +19,11 @@
 			<th><?php echo $this->Paginator->sort('program_name'); ?></th>
 			<th><?php echo $this->Paginator->sort('company'); ?></th>
 			<th><?php echo $this->Paginator->sort('voice_actor'); ?></th>
-			<th><?php echo $this->Paginator->sort('voice_actor2'); ?></th>
 			<th><?php echo $this->Paginator->sort('genre_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('genre2'); ?></th>
 			<th><?php echo $this->Paginator->sort('televising_year'); ?></th>
 			<th><?php echo $this->Paginator->sort('picture_url'); ?></th>
-<<<<<<< HEAD
 
-=======
-			<th class="actions"><?php echo __('Actions'); ?></th>
->>>>>>> 2b1f2126d17358f6a47cbcd6c5c2c3a5b3be6ea2
 	</tr>
 	</thead>
 	<tbody>
@@ -37,24 +32,15 @@
 		<td><?php echo h($animesList['AnimesList']['program_name']); ?>&nbsp;</td>
 		<td><?php echo h($animesList['AnimesList']['company']); ?>&nbsp;</td>
 		<td><?php echo h($animesList['AnimesList']['voice_actor']); ?>&nbsp;</td>
-		<td><?php echo h($animesList['AnimesList']['voice_actor2']); ?>&nbsp;</td>
 		<td>
 			<?php echo $this->Html->link($animesList['Genre']['genre_name'], array('controller' => 'genres', 'action' => 'view', $animesList['Genre']['id'])); ?>
 		</td>
 		<td><?php echo h($animesList['AnimesList']['genre2']); ?>&nbsp;</td>
 		<td><?php echo h($animesList['AnimesList']['televising_year']); ?>&nbsp;</td>
 		<td><?php echo h($animesList['AnimesList']['picture_url']); ?>&nbsp;</td>
-<<<<<<< HEAD
 
 
 
-=======
-		<td class="actions">
-			<?php echo $this->Html->link(__('View'), array('action' => 'view', $animesList['AnimesList']['id'])); ?>
-			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $animesList['AnimesList']['id'])); ?>
-			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $animesList['AnimesList']['id']), array('confirm' => __('Are you sure you want to delete # %s?', $animesList['AnimesList']['id']))); ?>
-		</td>
->>>>>>> 2b1f2126d17358f6a47cbcd6c5c2c3a5b3be6ea2
 	</tr>
 <?php endforeach; ?>
 	</tbody>
